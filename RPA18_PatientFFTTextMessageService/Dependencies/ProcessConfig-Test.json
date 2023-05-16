@@ -1,0 +1,126 @@
+{
+    "environments" : [
+    ],
+    "processes":[
+      {
+        "name": "RPA18_PatientFFTTextMessageService",
+        "description": "RPA18_PatientFFTTextMessageService",
+        "environmentName": "NHSI",
+        "package": {
+          "name": "RPA18_PatientFFTTextMessageService",
+          "version": ""
+        }
+      }
+    ],
+	"folders":[
+        {
+            "name" : "PExp",
+            "description" : "Patient Experience"
+        }
+    ],
+    "assets":[
+        {          
+            "type" : "Text",
+          "values": [
+            {
+              "name": "RPA_Server",
+              "description": "smtp.office365.com",
+              "value": "smtp.office365.com"
+            },
+            {
+              "name": "RPA_Email",
+              "description": "rpa.automation@nhs.net",
+              "value": "rpa.automation@nhs.net"
+            },
+            {
+              "name": "RPA_DBConnect_Infodb",
+              "description": "Data Source=sdmartdatalive2;Initial Catalog=InfoDB;Integrated Security=True;Encrypt=False",
+              "value": "Data Source=sdmartdatalive2;Initial Catalog=InfoDB;Integrated Security=True;Encrypt=False"
+            },
+            {
+              "name": "RPA18_StoredProc",
+              "description": "dbo.sp_ssrs_P1577_rpa",
+              "value": "dbo.sp_ssrs_P1577_rpa"
+            },
+            {
+              "name": "RPA18_Mailbox",
+              "description": "plh-tr.patientexperience@nhs.net",
+              "value": "plh-tr.patientexperience@nhs.net"
+            },
+            {
+              "name": "RPA_EmailTeam",
+              "description": "plh-tr.rpautomation@nhs.net",
+              "value": "plh-tr.rpautomation@nhs.net"
+            }
+
+          ]             
+        },
+        {
+            "type" : "Int",
+          "values": [
+            {
+              "name": "RPA_Port",
+              "description": "RPA_Port",
+              "value": "587"
+            },
+            {
+              "name": "RPA18_dtmstartdate",
+              "description": "RPA18_dtmstartdate",
+              "value": "-8"
+            },
+            {
+              "name": "RPA18_dtmenddate",
+              "description": "RPA18_dtmenddate",
+              "value": "-2"
+            }
+          ]
+        },
+        {
+            "type" : "Bool",
+            "values" : []
+        },
+        {
+            "type" : "Credential",
+          "values": [{
+              "name": "ClientId_Credential",
+              "description": "ClientId_Credential",
+              "username": "ClientId_Credential",
+              "password": "546dea56-9f69-4032-912d-a03d3ae26d82"
+            },
+            {
+              "name": "ClientSecret_Credential",
+              "description": "ClientSecret_Credential",
+              "username": "ClientSecret_Credential",
+              "password": "GJr4DdzJt9UJ-q_6-gQtHfnE5i~l1JCm~1"
+            },
+            {
+              "name": "SubscriptionId_Credential",
+              "description": "SubscriptionId_Credential",
+              "username": "SubscriptionId_Credential",
+              "password": "245133d8-0413-43a2-a4ed-78590ecbf008"
+            },
+            {
+              "name": "TenantId_Credential",
+              "description": "TenantId_Credential",
+              "username": "TenantId_Credential",
+              "password": "849873ab-4265-46f9-b32d-3fa4fbb97ea1"
+            },
+            {
+              "name": "Plymouth_KeyVault_Credential",
+              "description": "Plymouth_KeyVault_Credential",
+              "username": "Plymouth_KeyVault_Credential",
+              "password": "RK9-KeyVault"
+            }
+          ]
+        }   
+    ],
+    "queues":[
+      {
+        "name": "RPA18_QueuePatientList",
+        "description": "RPA18_QueuePatientList",
+        "uniqueReference": false,
+        "autoRetry": false,
+        "maxRetry": 0
+      }
+    ]
+}
